@@ -1,27 +1,27 @@
-import * as React from 'react';
+import React, {useContext} from 'react';
 import {Text, TextInput} from 'react-native';
+import {Context} from '../Context/Store'
 
 const AuthForm = props => {
 
   const [state] = useContext(Context);
-  const {nameValue, emailValue, passwordValue, confirmPasswordValue} = state
+  const {nameValue, emailValue, passwordValue, passwordConfirmationValue} = state;
 
   const confirmationField = (
     <>
       <Text>Confirmation:</Text>
       <TextInput
         style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-        onChangeText={text => onChangeText(text)}
-        value={confirmPasswordValue}
+        value={passwordConfirmationValue}
       />
     </>
   );
+
   const nameField = (
     <>
       <Text>Name:</Text>
       <TextInput
         style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-        onChangeText={text => onChangeText(text)}
         value={nameValue}
       />
     </>
@@ -33,13 +33,11 @@ const AuthForm = props => {
       <Text>Email:</Text>
       <TextInput
         style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-        onChangeText={text => onChangeText(text)}
         value={emailValue}
       />
       <Text>Password:</Text>
       <TextInput
         style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-        onChangeText={text => onChangeText(text)}
         value={passwordValue}
       />
       {props.form == 'Register' ? confirmationField : <Text />}

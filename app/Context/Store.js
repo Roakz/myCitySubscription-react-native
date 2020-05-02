@@ -8,7 +8,7 @@ const initialState = {
     emailValue: "enter your email here...",
     passwordValue: "enter your password here...",
     passwordConfirmationValue: "confirm your password here...",
-    nameValue: "Please enter your preffered name..."
+    nameValue: "enter your preferred name..."
 };
 
 const Store = ({children}) => {
