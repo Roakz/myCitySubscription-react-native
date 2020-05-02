@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import {Button} from 'react-native';
 
-const SplashButton = props => {
+const ButtonMain = props => {
   return (
     <Button
       onPress={props.onPress}
@@ -12,4 +12,4 @@ const SplashButton = props => {
   );
 };
 
-export default SplashButton;
+export default ButtonMain;

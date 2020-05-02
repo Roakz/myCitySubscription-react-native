@@ -16,25 +16,31 @@ import Register from './app/views/Register';
 import Login from './app/views/Login';
 import Splash from './app/views/Splash';
 import Donate from './app/views/Donate';
-import Dashboard from './app/views/Dashboard'
+import Dashboard from './app/views/Dashboard';
+import Code from './app/views/Code';
+import Store from './app/Context/Store';
+
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Splash"
-            component={Splash}
-            options={{title: 'MyCitySubscription'}}
-          />
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="Donate" component={Donate} />
-          <Stack.Screen name="Register" component={Register} />
-          <Stack.Screen name="Dashboard" component={Dashboard} />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <Store>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen
+              name="Splash"
+              component={Splash}
+              options={{title: 'MyCitySubscription'}}
+            />
+            <Stack.Screen name="Login" component={Login} />
+            <Stack.Screen name="Donate" component={Donate} />
+            <Stack.Screen name="Register" component={Register} />
+            <Stack.Screen name="Dashboard" component={Dashboard} />
+            <Stack.Screen name="Code" component={Code} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </Store>
     </>
   );
 };
