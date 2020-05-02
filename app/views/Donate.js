@@ -1,10 +1,9 @@
 import * as React from 'react';
 import {Text, Button} from 'react-native';
-const DonatePage = ({navigation}) => {
+const DonatePage = () => {
   return (
     <>
       <Text>Donate page</Text>
-      <Button title="Go back" onPress={() => navigation.goBack()} />
     </>
   );
 };

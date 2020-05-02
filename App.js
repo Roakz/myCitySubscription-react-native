@@ -16,7 +16,7 @@ import Register from './app/views/Register';
 import Login from './app/views/Login';
 import Splash from './app/views/Splash';
 import Donate from './app/views/Donate';
-
+import Dashboard from './app/views/Dashboard'
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -32,6 +32,7 @@ const App = () => {
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Donate" component={Donate} />
           <Stack.Screen name="Register" component={Register} />
+          <Stack.Screen name="Dashboard" component={Dashboard} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

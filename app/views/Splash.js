@@ -14,6 +14,10 @@ const SplashPage = ({navigation}) => {
         accessibilityLabel="Click this button to Log in."
         onPress={() => navigation.navigate('Login')}
       />
+       <SplashButton
+        title="Dashboard"
+        onPress={() => navigation.navigate('Dashboard')}
+      />
     </>
   );
 };
