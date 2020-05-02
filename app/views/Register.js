@@ -1,10 +1,12 @@
 import * as React from 'react';
-import {Button, Text} from 'react-native';
+import {Text} from 'react-native';
+import AuthForm from '../components/AuthForm'
 
 const RegisterPage = () => {
   return (
     <>
       <Text>Regsiter Page</Text>
+      <AuthForm form="Register"/>
     </>
   );
 };

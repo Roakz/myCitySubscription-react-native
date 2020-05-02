@@ -1,13 +1,17 @@
 import * as React from 'react';
+import {Text, TextInput} from 'react-native';
+import AuthForm from '../components/AuthForm';
 
-import {Text, Button} from 'react-native';
-
-const LoginPage = () => {
+const LoginPage = ({navigation}) => {
+  
   return (
     <>
-      <Text> Login Page </Text>
+      <AuthForm />
+      <Text style={{color: 'blue'}}
+      onPress={() => { navigation.navigate('Register')}}>
+      Register an account
+     </Text>
     </>
   );
 };
-
 export default LoginPage;
